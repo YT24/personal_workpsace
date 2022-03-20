@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/kmp/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/pom.xml" />
+        <option value="$PROJECT_DIR$/server1/pom.xml" />
+        <option value="$PROJECT_DIR$/xxl-job-master/pom.xml" />
+        <option value="$PROJECT_DIR$/Elasticsearch/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/AServer/BServer/pom.xml" />
+        <option value="$PROJECT_DIR$/BServer/pom.xml" />
+        <option value="$PROJECT_DIR$/AServer/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/server/XxlJobExector/pom.xml" />
+        <option value="$PROJECT_DIR$/server/server1/pom.xml" />
+        <option value="$PROJECT_DIR$/server/server2/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

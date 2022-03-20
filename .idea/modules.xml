@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AServer/AServer.iml" filepath="$PROJECT_DIR$/AServer/AServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BServer/BServer.iml" filepath="$PROJECT_DIR$/BServer/BServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GateWay/GateWay.iml" filepath="$PROJECT_DIR$/GateWay/GateWay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Elasticsearch/elasticsearch.iml" filepath="$PROJECT_DIR$/Elasticsearch/elasticsearch.iml" />
+    </modules>
+  </component>
+</project>

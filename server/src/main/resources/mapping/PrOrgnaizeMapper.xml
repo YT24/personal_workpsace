@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.yangt.mybatis.mapper.PrOrgnaizeMapper">
+    <resultMap id="PrOrgnaizeMapper" type="com.example.yangt.mybatis.pojo.PrOrgnaize">
+        <id property="id" column="pr_id" />
+        <result property="name" column="pr_name" />
+        <result property="parentId" column="pr_parentId" />
+        <result property="orgPath" column="pr_orgPath" />
+        <result property="orgCode" column="pr_orgCode" />
+        <result property="supCode" column="pr_sup_code" />
+        <result property="creatTime" column="pr_creatTime"/>
+        <!--封装映射company表数据，user表与company表1对1关系，配置1对1的映射,association:用于配置1对1的映射
+            属性property：company对象在user对象中的属性名
+            属性javaType：company属性的java对象 类型
+            属性column：user表中的外键引用company表
+            <association property="prOgnaize" javaType="com.example.demo.mybatis.pojo.PrOgnaize" column="pr_orgId">
+            <id property="id" column="pr_id_org"/>
+            <result property="name" column="pr_name" />
+            <result property="parentId" column="pr_parentId" />
+            <result property="orgPath" column="pr_orgPath" />
+            <result property="creatTime" column="pr_creatTime_org"/>
+            </association>
+        -->
+
+
+        <!--<association property="prJob" javaType="com.example.demo.mybatis.pojo.PrJob" column="pr_jobId">
+            <id property="id" column="pr_id_job"/>
+            <result property="name" column="pr_name_job" />
+            <result property="orgId" column="pr_orgId_job" />
+            <result property="creatTime" column="pr_creatTime_job"/>
+        </association>-->
+        <!--配置1对多关系映射
+            property：在user里面的List<Account>的属性名
+            ofType:当前account表的java类型
+            column:外键
+        -->
+         <collection property="jobList" ofType="com.example.yangt.mybatis.pojo.PrJob" javaType="java.util.ArrayList" column="">
+             <id property="id" column="pr_id_job"/>
+             <result property="name" column="pr_name_job" />
+             <result property="orgId" column="pr_orgId_job" />
+             <result property="creatTime" column="pr_creatTime_job"/>
+         </collection>
+    </resultMap>
+
+
+    <insert id="addOrg" parameterType="com.example.yangt.mybatis.pojo.PrOrgnaize">
+        insert  into pr_orgnaize (pr_id, pr_name,pr_orgCode, pr_parentId,pr_sup_code,pr_orgPath) values (#{id},#{name},#{orgCode},#{parentId},#{supCode},#{orgPath})
+    </insert>
+
+    <select id="getOrgById" resultMap="PrOrgnaizeMapper">
+
+        select
+         orgnaize.pr_id,
+         orgnaize.pr_name,
+         orgnaize.pr_orgCode,
+         orgnaize.pr_orgPath,
+         orgnaize.pr_parentId,
+         orgnaize.pr_sup_code,
+         orgnaize.pr_creatTime,
+
+         job.pr_id as pr_id_job,
+         job.pr_name as pr_name_job,
+         job.pr_orgId as pr_orgId_job,
+         job.pr_creatTime as pr_creatTime_job
+
+        from pr_orgnaize orgnaize
+        left join pr_job job on orgnaize.pr_id = orgnaize.pr_id
+        where orgnaize.pr_id = #{id};
+
+    </select>
+
+    <select id="getOrgByCode" resultMap="PrOrgnaizeMapper">
+
+        select
+         orgnaize.pr_id,
+         orgnaize.pr_name,
+         orgnaize.pr_orgCode,
+         orgnaize.pr_orgPath,
+         orgnaize.pr_parentId,
+         orgnaize.pr_sup_code,
+         orgnaize.pr_creatTime,
+
+         job.pr_id as pr_id_job,
+         job.pr_name as pr_name_job,
+         job.pr_orgId as pr_orgId_job,
+         job.pr_creatTime as pr_creatTime_job
+
+        from pr_orgnaize orgnaize
+        left join pr_job job on orgnaize.pr_id = orgnaize.pr_id
+        where orgnaize.pr_orgCode = #{orgCode};
+
+    </select>
+
+
+    <select id="getAllOrg" resultMap="PrOrgnaizeMapper" parameterType="String">
+         select
+         orgnaize.pr_id,
+         orgnaize.pr_name,
+         orgnaize.pr_orgCode,
+         orgnaize.pr_orgPath,
+         orgnaize.pr_parentId,
+         orgnaize.pr_creatTime,
+
+         job.pr_id as pr_id_job,
+         job.pr_name as pr_name_job,
+         job.pr_orgId as pr_orgId_org,
+         job.pr_creatTime as pr_creatTime_org
+
+        from pr_orgnaize orgnaize
+        left join pr_job job on orgnaize.pr_id = orgnaize.pr_id
+    </select>
+
+    <update id="updateOrg" parameterType="com.example.yangt.mybatis.pojo.PrOrgnaize">
+        update pr_orgnaize set pr_name = #{name},pr_orgPath = #{orgPath} where pr_id = #{id}
+    </update>
+
+    <delete id="deleteUser" parameterType="com.example.yangt.mybatis.pojo.PrOrgnaize">
+        delete from pr_orgnaize where pr_id = #{id}
+    </delete>
+
+    <select id="query" resultMap="PrOrgnaizeMapper">
+         select * from pr_orgnaize
+    </select>
+
+</mapper>

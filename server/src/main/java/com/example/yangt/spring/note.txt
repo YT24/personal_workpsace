@@ -1,0 +1,32 @@
+1. IOC
+   即 控制反转 IOC容器负责实例化，定位，配置应用程序中的对象以及建立这些对象的依赖,交由spring 容器经行统一管理从而实现松耦合
+
+   <就是由spring来负责控制对象的生命周期和对象间的关系>
+
+   IOC不是一种技术，是一种设计思想
+
+   XML + 动态代理方式实现
+
+2. 依赖注入
+   所谓的依赖注入 就是在IOC 容器运行期间动态的将某种依赖关系注入到对象之中
+
+   依赖注入的三种方式：
+     1. set方法注入
+     2. 构造器注入
+     3. p名称 空间注入
+
+
+
+3. Bean的生命周期
+   3.1 实例化对象；
+   3.2 填充属性值及引用；
+
+   3.3 调用 BeanNameAware 的 setBeanName(String name) 设置 bean 的 id；
+   3.4 调用 BeanFactoryAware 的 setBeanFactory(BeanFactory beanFactory) 设置 BeanFactory Bean工厂；
+   3.5 同上：ApplicationContextAwaresetApplicationContext(ApplicationContext applicationContext)；
+   3.6 如果实现 BeanPostProcessor，则 调用 postProcessBeforeInitialization() 初始化前的后置处理方法
+
+   3.7 如果实现了 InitializingBean 接口，则使用 afterPropertiesSet() 来初始化属性
+
+   3.8 如果实现 BeanPostProcessor，则 调用 postProcessAfterInitialization() 初始化后的后置处理方法  此时，bean 就可以使用了
+   3.9 DisposableBean接口 destroy() 销毁bean。不过在Spring5.0开始，DisposableBean.destroy() 已经是过时的方法了，可直接使用 close()。

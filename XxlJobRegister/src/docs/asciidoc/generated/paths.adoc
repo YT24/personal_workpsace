@@ -1,0 +1,34 @@
+
+[[_paths]]
+== Paths
+
+[[_esusingget]]
+=== 目录查询
+....
+GET /es
+....
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* es-controller
+
+
+

@@ -1,0 +1,35 @@
+server:
+  port: 8888
+
+
+spring:
+  thymeleaf:
+    cache: false # 关闭页面缓存
+    encoding: UTF-8 # 模板编码
+    prefix: classpath:/templates/  # 页面映射路径
+    suffix: .html # 试图后的后缀
+
+    #redis
+  redis:
+    host: 172.28.56.113
+    jedis:
+      pool:
+        max-idle: 200
+        max-wait:
+    password: Shangjian@123
+    port: 6379
+    timeout: 6000
+    enable: true
+
+  application:
+    name: AServer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+threadpool:
+  corePoolSize: 2
+  keepAliveSeconds: 300
+  maxPoolSize: 5
+  queueCapacity: 10

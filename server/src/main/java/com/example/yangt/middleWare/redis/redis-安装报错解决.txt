@@ -1,0 +1,14 @@
+Centos7安装redis6.0.3，报错make[1]: *** [server.o] Error 1的解决
+原因是因为gcc版本过低，yum安装的gcc是4.8.5的。因此需要升级gcc，升级过程如下：
+
+yum -y install centos-release-scl
+
+yum -y install devtoolset-9-gcc devtoolset-9-gcc-c++ devtoolset-9-binutils
+
+#这句是临时的
+
+scl enable devtoolset-9 bash
+
+#修改环境变量
+echo "source /opt/rh/devtoolset-9/enable" >> /etc/profile
+gcc -v

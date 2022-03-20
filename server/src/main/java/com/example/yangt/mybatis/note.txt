@@ -1,0 +1,15 @@
+驼峰命名开启
+
+pojo 别名配置开启
+
+databaseIdProvider  多数据库支持
+
+mapper.xml Mapper 接口绑定  动态代理实现
+
+Mapper 接口参数 会封装成一个Map
+
+SqlSessionFactory
+
+ SqlSession sqlSession = openSession.opensession();
+ sqlSession.select("id","args");
+ sqlSession.close()

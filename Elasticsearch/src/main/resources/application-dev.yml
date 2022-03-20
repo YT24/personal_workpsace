@@ -1,0 +1,14 @@
+server:
+  port: 9999
+
+spring:
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: 10.211.55.10:9300 # 程序连接es的端口号是9300
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848

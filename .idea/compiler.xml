@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="AServer" />
+        <module name="elasticsearch" />
+        <module name="GateWay" />
+        <module name="consumer" />
+        <module name="BServer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="aserver" target="1.8" />
+      <module name="AServer" target="1.8" />
+      <module name="bserver" target="1.8" />
+      <module name="BServer" target="1.8" />
+      <module name="client" target="1.8" />
+      <module name="common-api" target="1.8" />
+      <module name="common-assembly" target="1.8" />
+      <module name="common-core" target="1.8" />
+      <module name="common-log" target="1.8" />
+      <module name="consumer" target="1.8" />
+      <module name="demo (1)" target="1.8" />
+      <module name="demo1" target="1.8" />
+      <module name="elasticsearch" target="1.8" />
+      <module name="GateWay" target="1.8" />
+      <module name="gateway" target="1.8" />
+      <module name="kmp" target="1.8" />
+      <module name="kmp-admin" target="1.8" />
+      <module name="kmp-common" target="1.8" />
+      <module name="kmp-gateway" target="1.8" />
+      <module name="kmp-module-common" target="1.8" />
+      <module name="kmp-modules" target="1.8" />
+      <module name="kmp-visual" target="1.8" />
+      <module name="manba" target="1.8" />
+      <module name="personal_workpsace" target="1.8" />
+      <module name="server" target="1.8" />
+      <module name="server1" target="1.8" />
+      <module name="server2" target="1.8" />
+      <module name="server2 (1)" target="8" />
+      <module name="sharding-jdbc" target="1.8" />
+      <module name="visual-monitor" target="1.8" />
+      <module name="xxl-job" target="1.8" />
+      <module name="xxl-job-admin" target="1.8" />
+      <module name="xxl-job-core" target="1.8" />
+      <module name="xxl-job-executor-sample-frameless" target="1.8" />
+      <module name="xxl-job-executor-sample-springboot" target="1.8" />
+      <module name="xxl-job-executor-samples" target="1.8" />
+      <module name="XxlJobExector" target="1.8" />
+      <module name="XxlJobRegister" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="AServer" options="-parameters" />
+      <module name="BServer" options="-parameters" />
+      <module name="GateWay" options="-parameters" />
+      <module name="XxlJobRegister" options="-parameters" />
+      <module name="aserver" options="-parameters" />
+      <module name="bserver" options="-parameters" />
+      <module name="client" options="" />
+      <module name="consumer" options="-parameters" />
+      <module name="demo (1)" options="-parameters" />
+      <module name="demo1" options="-parameters" />
+      <module name="elasticsearch" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="server" options="-parameters" />
+      <module name="sharding-jdbc" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.yangt.mybatis.mapper.PrUserMapper">
+    <!--<cache type="com.example.yangt.mybatis.cache.RedisCache"/>-->
+    <resultMap id="PrUserMapper" type="com.example.yangt.mybatis.pojo.PrUser">
+        <id property="id" column="pr_id" />
+        <result property="uid" column="pr_uid" />
+        <result property="password" column="pr_password" />
+        <result property="createTime" column="pr_createTime" />
+        <result property="modifyPasswordTime" column="pr_modifyPasswordTime"/>
+        <result property="orgId" column="pr_orgId"/>
+        <result property="jobId" column="pr_jobId"/>
+        <!--封装映射company表数据，user表与company表1对1关系，配置1对1的映射,association:用于配置1对1的映射
+            属性property：company对象在user对象中的属性名
+            属性javaType：company属性的java对象 类型
+            属性column：user表中的外键引用company表
+        -->
+        <association property="prOrgnaize" javaType="com.example.yangt.mybatis.pojo.PrOrgnaize" column="pr_orgId">
+            <id property="id" column="pr_id_org"/>
+            <result property="name" column="pr_name" />
+            <result property="parentId" column="pr_parentId" />
+            <result property="orgPath" column="pr_orgPath" />
+            <result property="orgCode" column="pr_orgCode" />
+            <result property="supCode" column="pr_sup_code" />
+
+            <result property="creatTime" column="pr_creatTime_org"/>
+        </association>
+
+        <association property="prJob" javaType="com.example.yangt.mybatis.pojo.PrJob" column="pr_jobId" fetchType="lazy">
+            <id property="id" column="pr_id_job"/>
+            <result property="name" column="pr_name_job" />
+            <result property="orgId" column="pr_orgId_job" />
+            <result property="creatTime" column="pr_creatTime_job"/>
+        </association>
+        <!--配置1对多关系映射
+            property：在user里面的List<Account>的属性名
+            ofType:当前account表的java类型
+            column:外键
+        -->
+        <!-- <collection property="" ofType="" column="">
+
+         </collection>-->
+    </resultMap>
+
+
+    <insert id="doAddUser" parameterType="com.example.yangt.mybatis.pojo.PrUser">
+        insert into pr_user (pr_id, pr_uid, pr_password, pr_createTime, pr_modifyPasswordTime, pr_orgId, pr_jobId)
+        values (#{id}, #{uid}, #{password}, #{creatTime}, #{modifyPasswordTime}, #{orgId}, #{jobId})
+    </insert>
+
+    <sql id="userFiled">
+            users.pr_id,
+            users.pr_uid,
+            users.pr_password,
+            users.pr_createTime,
+            users.pr_modifyPasswordTime,
+            users.pr_orgId,
+            users.pr_jobId,
+
+            organize.pr_id as pr_id_org,
+            organize.pr_name,
+            organize.pr_parentId,
+            organize.pr_orgPath,
+            organize.pr_orgCode,
+            organize.pr_sup_code,
+            organize.pr_creatTime as pr_creatTime_org,
+
+            job.pr_id as pr_id_job,
+            job.pr_name as pr_name_job,
+            job.pr_orgId as pr_orgId_job,
+            job.pr_creatTime as pr_creatTime_job
+    </sql>
+    <!--查询用户根据 uid-->
+    <select id="getUserByUid" resultMap="PrUserMapper">
+        select
+            <include refid="userFiled"></include>
+        from pr_user users
+        left join pr_organize organize on users.pr_orgId = organize.pr_id
+        left  join pr_job job on users.pr_jobId = job.pr_id where pr_uid = #{uid};
+    </select>
+
+    <!--查询传入的字段来查询用户-->
+    <select id="queryBy" resultMap="PrUserMapper">
+        select
+        <include refid="userFiled"></include>
+        from pr_user users
+        left join pr_organize organize on users.pr_orgId = organize.pr_id
+        left  join pr_job job on users.pr_jobId = job.pr_id
+        <trim prefix="where" prefixOverrides="and">
+            <if test="uid != null and uid.trim() !=''">
+                 pr_uid = #{uid}
+            </if>
+
+            <if test="password != null and password.trim() !=''">
+                 and pr_password = #{password}
+            </if>
+        </trim>
+    </select>
+
+    <!--查询用户根据 id-->
+    <select id="getUserById" resultMap="PrUserMapper">
+        select
+        <include refid="userFiled"></include>
+        from pr_user users
+        left join pr_organize organize on users.pr_orgId = organize.pr_id
+        left  join pr_job job on users.pr_jobId = job.pr_id where users.pr_id = #{id};
+    </select>
+
+    <!--更新用户-->
+    <update id="updateUser">
+        update pr_user
+        <trim prefix="set" prefixOverrides="," suffix="where pr_id = #{id}">
+            <if test="jobId != null">
+                 pr_jobId = #{jobId}
+            </if>
+            <if test="password != null">
+                 ,pr_password = #{password}
+            </if>
+            <if test="orgId != null">
+                 ,pr_orgId = #{orgId}
+            </if>
+        </trim>
+    </update>
+
+    <!--删除用户-->
+    <delete id="deleteUser" parameterType="String">
+        delete from pr_user where pr_id = #{id}
+    </delete>
+
+
+    <select id="queryByPage"  resultMap="PrUserMapper">
+        select
+        <include refid="userFiled"></include>
+        from pr_user users
+        left join pr_organize organize on users.pr_orgId = organize.pr_id
+        left  join pr_job job on users.pr_jobId = job.pr_id
+    </select>
+
+    <select id="query"  resultMap="PrUserMapper">
+
+        <!--select * from pr_user
+        <where>
+        <if test="id != null">
+            id = #{id}
+        </if>
+
+        <if test="pr_uid != null">
+            and pr_uid = #{uid}
+        </if>
+        /*name 不为null 不为空*/
+        &lt;!&ndash;<if test="name != null and name != @quot;@quot;">&ndash;&gt;
+        <if test="name != null and name.trim() != @quot;@quot;">
+            and name like  #{name}
+        </if>
+        </where>-->
+
+        /*使用trim标签*/
+
+        <trim prefix="where" prefixOverrides="and">
+            <if test="id != null">
+                id = #{id}
+            </if>
+
+            <if test="pr_uid != null">
+                and pr_uid = #{uid}
+            </if>
+            /*name 不为null 不为空*/
+            <!--<if test="name != null and name != @quot;@quot;">-->
+            <if test="name != null and name.trim() != @quot;@quot;">
+                and name like  #{name}
+            </if>
+        </trim>
+    </select>
+
+
+</mapper>

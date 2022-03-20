@@ -1,0 +1,363 @@
+2021-11-22 14:11:20,785 INFO [main] c.e.x.XxlJobRegisterApplication [StartupInfoLogger.java : 55] Starting XxlJobRegisterApplication on yangtedeMacBook-Pro.local with PID 3182 (/Users/yangte/shangjan/workspace/personal_workpsace/XxlJobRegister/target/classes started by yangte in /Users/yangte/shangjan/workspace/personal_workpsace)
+2021-11-22 14:11:20,790 INFO [main] c.e.x.XxlJobRegisterApplication [SpringApplication.java : 648] No active profile set, falling back to default profiles: default
+2021-11-22 14:11:21,903 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8080 (http)
+2021-11-22 14:11:21,915 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8080"]
+2021-11-22 14:11:21,916 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2021-11-22 14:11:21,917 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-11-22 14:11:21,986 INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2021-11-22 14:11:21,986 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 285] Root WebApplicationContext: initialization completed in 899 ms
+2021-11-22 14:11:22,041 INFO [main] c.e.x.config.XxlJobConfig [XxlJobConfig.java : 42] >>>>>>>>>>> xxl-job config init.
+2021-11-22 14:11:22,177 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 181] Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-22 14:11:22,319 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:my-xxl-job-test-1, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@3a4ab7f7[class com.example.xxljobregister.handler.MyJobHandler#execute]
+2021-11-22 14:11:22,372 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-executor-samples"
+java.text.ParseException: Unparseable date: "xxl-job-executor-samples"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 14:11:22,373 WARN [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 152] >>>>>>>>>>> xxl-job accessToken is empty. To ensure system security, please set the accessToken.
+2021-11-22 14:11:22,373 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-core"
+java.text.ParseException: Unparseable date: "xxl-job-core"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 14:11:22,373 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-admin"
+java.text.ParseException: Unparseable date: "xxl-job-admin"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 14:11:22,381 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8080"]
+2021-11-22 14:11:22,441 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-22 14:11:22,459 INFO [main] c.e.x.XxlJobRegisterApplication [StartupInfoLogger.java : 61] Started XxlJobRegisterApplication in 2.123 seconds (JVM running for 3.058)
+2021-11-22 14:11:22,541 INFO [Thread-9] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 86] >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 1111
+2021-11-22 14:21:50,163 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 218] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-22 14:21:50,164 INFO [Thread-9] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 96] >>>>>>>>>>> xxl-job remoting server stop.
+2021-11-22 14:21:50,169 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 87] >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xxl-job-register', registryValue='http://192.168.22.228:1111/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2021-11-22 14:21:50,169 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 105] >>>>>>>>>>> xxl-job, executor registry thread destory.
+2021-11-22 14:21:50,170 INFO [SpringContextShutdownHook] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 125] >>>>>>>>>>> xxl-job remoting server destroy success.
+2021-11-22 14:21:50,171 INFO [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 99] >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destory.
+2021-11-22 14:21:50,171 INFO [xxl-job, executor TriggerCallbackThread] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 98] >>>>>>>>>>> xxl-job, executor callback thread destory.
+2021-11-22 14:21:50,171 INFO [Thread-8] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 128] >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2021-11-22 15:08:05,369 INFO [main] c.x.j.e.XxlJobExecutorSampleApplication [StartupInfoLogger.java : 55] Starting XxlJobExecutorSampleApplication using Java 1.8.0_181 on yangtedeMacBook-Pro.local with PID 3491 (/Users/yangte/shangjan/workspace/personal_workpsace/xxl-job-master/xxl-job-executor-samples/xxl-job-executor-sample-springboot/target/classes started by yangte in /Users/yangte/shangjan/workspace/personal_workpsace)
+2021-11-22 15:08:05,380 INFO [main] c.x.j.e.XxlJobExecutorSampleApplication [SpringApplication.java : 675] No active profile set, falling back to default profiles: default
+2021-11-22 15:08:07,774 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8081 (http)
+2021-11-22 15:08:07,792 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8081"]
+2021-11-22 15:08:07,794 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2021-11-22 15:08:07,794 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-11-22 15:08:07,897 INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2021-11-22 15:08:07,898 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 289] Root WebApplicationContext: initialization completed in 2137 ms
+2021-11-22 15:08:08,037 INFO [main] c.x.j.e.core.config.XxlJobConfig [XxlJobConfig.java : 46] >>>>>>>>>>> xxl-job config init.
+2021-11-22 15:08:08,271 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 181] Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-22 15:08:08,688 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:my-xxl-job, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@64e1377c[class com.xxl.job.executor.service.jobhandler.MyJobHandler#execute]
+2021-11-22 15:08:08,690 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@72976b4[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#shardingJobHandler]
+2021-11-22 15:08:08,690 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@726934e2[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#demoJobHandler]
+2021-11-22 15:08:08,690 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@1319bc2a[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#commandJobHandler]
+2021-11-22 15:08:08,690 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@e280403[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#httpJobHandler]
+2021-11-22 15:08:08,691 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler2, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@42f85fa4[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#demoJobHandler2]
+2021-11-22 15:08:08,788 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-executor-samples"
+java.text.ParseException: Unparseable date: "xxl-job-executor-samples"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 15:08:08,789 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-core"
+java.text.ParseException: Unparseable date: "xxl-job-core"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 15:08:08,789 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-admin"
+java.text.ParseException: Unparseable date: "xxl-job-admin"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 15:08:08,790 WARN [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 152] >>>>>>>>>>> xxl-job accessToken is empty. To ensure system security, please set the accessToken.
+2021-11-22 15:08:08,804 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8081"]
+2021-11-22 15:08:08,852 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8081 (http) with context path ''
+2021-11-22 15:08:08,867 INFO [main] c.x.j.e.XxlJobExecutorSampleApplication [StartupInfoLogger.java : 61] Started XxlJobExecutorSampleApplication in 4.143 seconds (JVM running for 5.203)
+2021-11-22 15:08:09,192 INFO [Thread-13] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 86] >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2021-11-22 15:12:14,781 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 218] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-22 15:12:14,783 INFO [Thread-13] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 96] >>>>>>>>>>> xxl-job remoting server stop.
+2021-11-22 15:12:14,787 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 87] >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xxl-job-executor-sample', registryValue='http://192.168.22.228:9999/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2021-11-22 15:12:14,787 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 105] >>>>>>>>>>> xxl-job, executor registry thread destory.
+2021-11-22 15:12:14,788 INFO [SpringContextShutdownHook] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 125] >>>>>>>>>>> xxl-job remoting server destroy success.
+2021-11-22 15:12:14,788 INFO [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 99] >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destory.
+2021-11-22 15:12:14,789 INFO [xxl-job, executor TriggerCallbackThread] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 98] >>>>>>>>>>> xxl-job, executor callback thread destory.
+2021-11-22 15:12:14,790 INFO [Thread-12] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 128] >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2021-11-22 15:12:24,590 INFO [main] c.x.j.e.XxlJobExecutorSampleApplication [StartupInfoLogger.java : 55] Starting XxlJobExecutorSampleApplication using Java 1.8.0_181 on yangtedeMacBook-Pro.local with PID 3506 (/Users/yangte/shangjan/workspace/personal_workpsace/xxl-job-master/xxl-job-executor-samples/xxl-job-executor-sample-springboot/target/classes started by yangte in /Users/yangte/shangjan/workspace/personal_workpsace)
+2021-11-22 15:12:24,629 INFO [main] c.x.j.e.XxlJobExecutorSampleApplication [SpringApplication.java : 675] No active profile set, falling back to default profiles: default
+2021-11-22 15:12:26,270 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8081 (http)
+2021-11-22 15:12:26,279 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8081"]
+2021-11-22 15:12:26,280 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2021-11-22 15:12:26,280 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-11-22 15:12:26,345 INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2021-11-22 15:12:26,346 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 289] Root WebApplicationContext: initialization completed in 1199 ms
+2021-11-22 15:12:26,401 INFO [main] c.x.j.e.core.config.XxlJobConfig [XxlJobConfig.java : 46] >>>>>>>>>>> xxl-job config init.
+2021-11-22 15:12:26,510 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 181] Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-22 15:12:26,681 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:my-xxl-job, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@2b1cd7bc[class com.xxl.job.executor.service.jobhandler.MyJobHandler#execute]
+2021-11-22 15:12:26,683 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@72bdd7c7[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#shardingJobHandler]
+2021-11-22 15:12:26,683 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@7d17ee50[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#demoJobHandler]
+2021-11-22 15:12:26,683 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@44fdce3c[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#commandJobHandler]
+2021-11-22 15:12:26,683 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@712c5463[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#httpJobHandler]
+2021-11-22 15:12:26,683 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler2, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@6d33a66e[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#demoJobHandler2]
+2021-11-22 15:12:26,746 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-executor-samples"
+java.text.ParseException: Unparseable date: "xxl-job-executor-samples"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 15:12:26,747 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-core"
+java.text.ParseException: Unparseable date: "xxl-job-core"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 15:12:26,748 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-admin"
+java.text.ParseException: Unparseable date: "xxl-job-admin"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 15:12:26,749 WARN [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 152] >>>>>>>>>>> xxl-job accessToken is empty. To ensure system security, please set the accessToken.
+2021-11-22 15:12:26,761 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8081"]
+2021-11-22 15:12:26,804 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8081 (http) with context path ''
+2021-11-22 15:12:26,818 INFO [main] c.x.j.e.XxlJobExecutorSampleApplication [StartupInfoLogger.java : 61] Started XxlJobExecutorSampleApplication in 3.523 seconds (JVM running for 6.834)
+2021-11-22 15:12:26,998 INFO [Thread-13] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 86] >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2021-11-22 15:12:49,586 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 218] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-22 15:12:49,587 INFO [Thread-13] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 96] >>>>>>>>>>> xxl-job remoting server stop.
+2021-11-22 15:12:49,590 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 87] >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xxl-job-executor-sample', registryValue='http://192.168.22.228:9999/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2021-11-22 15:12:49,590 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 105] >>>>>>>>>>> xxl-job, executor registry thread destory.
+2021-11-22 15:12:49,591 INFO [SpringContextShutdownHook] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 125] >>>>>>>>>>> xxl-job remoting server destroy success.
+2021-11-22 15:12:49,591 INFO [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 99] >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destory.
+2021-11-22 15:12:49,592 INFO [xxl-job, executor TriggerCallbackThread] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 98] >>>>>>>>>>> xxl-job, executor callback thread destory.
+2021-11-22 15:12:49,592 INFO [Thread-12] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 128] >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2021-11-22 15:12:58,466 INFO [main] c.x.j.e.XxlJobExecutorSampleApplication [StartupInfoLogger.java : 55] Starting XxlJobExecutorSampleApplication using Java 1.8.0_181 on yangtedeMacBook-Pro.local with PID 3512 (/Users/yangte/shangjan/workspace/personal_workpsace/xxl-job-master/xxl-job-executor-samples/xxl-job-executor-sample-springboot/target/classes started by yangte in /Users/yangte/shangjan/workspace/personal_workpsace)
+2021-11-22 15:12:58,472 INFO [main] c.x.j.e.XxlJobExecutorSampleApplication [SpringApplication.java : 675] No active profile set, falling back to default profiles: default
+2021-11-22 15:12:59,739 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8081 (http)
+2021-11-22 15:12:59,747 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8081"]
+2021-11-22 15:12:59,748 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2021-11-22 15:12:59,748 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-11-22 15:12:59,798 INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2021-11-22 15:12:59,799 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 289] Root WebApplicationContext: initialization completed in 911 ms
+2021-11-22 15:12:59,854 INFO [main] c.x.j.e.core.config.XxlJobConfig [XxlJobConfig.java : 46] >>>>>>>>>>> xxl-job config init.
+2021-11-22 15:12:59,975 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 181] Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-22 15:13:00,133 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:my-xxl-job, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@2d760326[class com.xxl.job.executor.service.jobhandler.MyJobHandler#execute]
+2021-11-22 15:13:00,134 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@575c3e9b[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#shardingJobHandler]
+2021-11-22 15:13:00,134 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@74f827ad[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#demoJobHandler]
+2021-11-22 15:13:00,134 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@73c3cd09[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#commandJobHandler]
+2021-11-22 15:13:00,134 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@4a8a0099[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#httpJobHandler]
+2021-11-22 15:13:00,135 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler2, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@7c1447b5[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#demoJobHandler2]
+2021-11-22 15:13:00,193 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-executor-samples"
+java.text.ParseException: Unparseable date: "xxl-job-executor-samples"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 15:13:00,194 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-core"
+java.text.ParseException: Unparseable date: "xxl-job-core"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 15:13:00,194 WARN [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 152] >>>>>>>>>>> xxl-job accessToken is empty. To ensure system security, please set the accessToken.
+2021-11-22 15:13:00,195 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-admin"
+java.text.ParseException: Unparseable date: "xxl-job-admin"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 15:13:00,208 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8081"]
+2021-11-22 15:13:00,245 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8081 (http) with context path ''
+2021-11-22 15:13:00,258 INFO [main] c.x.j.e.XxlJobExecutorSampleApplication [StartupInfoLogger.java : 61] Started XxlJobExecutorSampleApplication in 2.749 seconds (JVM running for 5.337)
+2021-11-22 15:13:00,383 INFO [Thread-12] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 86] >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 2222
+2021-11-22 15:14:49,263 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 218] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-22 15:14:49,265 INFO [Thread-12] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 96] >>>>>>>>>>> xxl-job remoting server stop.
+2021-11-22 15:14:49,269 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 87] >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xxl-job-executor-sample', registryValue='http://192.168.22.228:2222/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2021-11-22 15:14:49,269 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 105] >>>>>>>>>>> xxl-job, executor registry thread destory.
+2021-11-22 15:14:49,270 INFO [SpringContextShutdownHook] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 125] >>>>>>>>>>> xxl-job remoting server destroy success.
+2021-11-22 15:14:49,270 INFO [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 99] >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destory.
+2021-11-22 15:14:49,270 INFO [xxl-job, executor TriggerCallbackThread] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 98] >>>>>>>>>>> xxl-job, executor callback thread destory.
+2021-11-22 15:14:49,271 INFO [Thread-11] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 128] >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2021-11-22 15:14:56,859 INFO [main] c.x.j.e.XxlJobExecutorSampleApplication [StartupInfoLogger.java : 55] Starting XxlJobExecutorSampleApplication using Java 1.8.0_181 on yangtedeMacBook-Pro.local with PID 3523 (/Users/yangte/shangjan/workspace/personal_workpsace/xxl-job-master/xxl-job-executor-samples/xxl-job-executor-sample-springboot/target/classes started by yangte in /Users/yangte/shangjan/workspace/personal_workpsace)
+2021-11-22 15:14:56,863 INFO [main] c.x.j.e.XxlJobExecutorSampleApplication [SpringApplication.java : 675] No active profile set, falling back to default profiles: default
+2021-11-22 15:14:57,998 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8081 (http)
+2021-11-22 15:14:58,007 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8081"]
+2021-11-22 15:14:58,007 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2021-11-22 15:14:58,008 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-11-22 15:14:58,057 INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2021-11-22 15:14:58,057 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 289] Root WebApplicationContext: initialization completed in 859 ms
+2021-11-22 15:14:58,112 INFO [main] c.x.j.e.core.config.XxlJobConfig [XxlJobConfig.java : 46] >>>>>>>>>>> xxl-job config init.
+2021-11-22 15:14:58,231 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 181] Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-22 15:14:58,382 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:my-xxl-job, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@1668919e[class com.xxl.job.executor.service.jobhandler.MyJobHandler#execute]
+2021-11-22 15:14:58,384 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@68d6d775[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#shardingJobHandler]
+2021-11-22 15:14:58,384 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@b67cc70[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#demoJobHandler]
+2021-11-22 15:14:58,384 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@45c9b3[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#commandJobHandler]
+2021-11-22 15:14:58,384 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@38b3f208[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#httpJobHandler]
+2021-11-22 15:14:58,384 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler2, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@6680f714[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#demoJobHandler2]
+2021-11-22 15:14:58,439 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-executor-samples"
+java.text.ParseException: Unparseable date: "xxl-job-executor-samples"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 15:14:58,440 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-core"
+java.text.ParseException: Unparseable date: "xxl-job-core"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 15:14:58,440 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-admin"
+java.text.ParseException: Unparseable date: "xxl-job-admin"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 15:14:58,440 WARN [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 152] >>>>>>>>>>> xxl-job accessToken is empty. To ensure system security, please set the accessToken.
+2021-11-22 15:14:58,452 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8081"]
+2021-11-22 15:14:58,487 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8081 (http) with context path ''
+2021-11-22 15:14:58,500 INFO [main] c.x.j.e.XxlJobExecutorSampleApplication [StartupInfoLogger.java : 61] Started XxlJobExecutorSampleApplication in 2.426 seconds (JVM running for 4.851)
+2021-11-22 15:14:58,615 INFO [Thread-12] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 86] >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 2222
+2021-11-22 15:18:15,330 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 218] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-22 15:18:15,332 INFO [Thread-12] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 96] >>>>>>>>>>> xxl-job remoting server stop.
+2021-11-22 15:18:15,334 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 87] >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='job-exector', registryValue='http://192.168.22.228:2222/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2021-11-22 15:18:15,335 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 105] >>>>>>>>>>> xxl-job, executor registry thread destory.
+2021-11-22 15:18:15,335 INFO [SpringContextShutdownHook] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 125] >>>>>>>>>>> xxl-job remoting server destroy success.
+2021-11-22 15:18:15,335 INFO [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 99] >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destory.
+2021-11-22 15:18:15,336 INFO [xxl-job, executor TriggerCallbackThread] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 98] >>>>>>>>>>> xxl-job, executor callback thread destory.
+2021-11-22 15:18:15,336 INFO [Thread-11] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 128] >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2021-11-22 15:18:24,347 INFO [main] c.x.j.e.XxlJobExecutorSampleApplication [StartupInfoLogger.java : 55] Starting XxlJobExecutorSampleApplication using Java 1.8.0_181 on yangtedeMacBook-Pro.local with PID 3544 (/Users/yangte/shangjan/workspace/personal_workpsace/xxl-job-master/xxl-job-executor-samples/xxl-job-executor-sample-springboot/target/classes started by yangte in /Users/yangte/shangjan/workspace/personal_workpsace)
+2021-11-22 15:18:24,352 INFO [main] c.x.j.e.XxlJobExecutorSampleApplication [SpringApplication.java : 675] No active profile set, falling back to default profiles: default
+2021-11-22 15:18:25,270 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8081 (http)
+2021-11-22 15:18:25,278 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8081"]
+2021-11-22 15:18:25,279 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2021-11-22 15:18:25,279 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-11-22 15:18:25,339 INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2021-11-22 15:18:25,340 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 289] Root WebApplicationContext: initialization completed in 739 ms
+2021-11-22 15:18:25,397 INFO [main] c.x.j.e.core.config.XxlJobConfig [XxlJobConfig.java : 46] >>>>>>>>>>> xxl-job config init.
+2021-11-22 15:18:25,520 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 181] Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-22 15:18:25,669 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:my-xxl-job, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@2bfaba70[class com.xxl.job.executor.service.jobhandler.MyJobHandler#execute]
+2021-11-22 15:18:25,670 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@3238e2aa[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#shardingJobHandler]
+2021-11-22 15:18:25,671 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@2c7db926[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#demoJobHandler]
+2021-11-22 15:18:25,671 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@2577a95d[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#commandJobHandler]
+2021-11-22 15:18:25,671 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@1668919e[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#httpJobHandler]
+2021-11-22 15:18:25,671 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler2, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@63300c4b[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#demoJobHandler2]
+2021-11-22 15:18:25,739 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-executor-samples"
+java.text.ParseException: Unparseable date: "xxl-job-executor-samples"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 15:18:25,740 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-core"
+java.text.ParseException: Unparseable date: "xxl-job-core"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 15:18:25,740 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-admin"
+java.text.ParseException: Unparseable date: "xxl-job-admin"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 15:18:25,740 WARN [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 152] >>>>>>>>>>> xxl-job accessToken is empty. To ensure system security, please set the accessToken.
+2021-11-22 15:18:25,752 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8081"]
+2021-11-22 15:18:25,801 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8081 (http) with context path ''
+2021-11-22 15:18:25,818 INFO [main] c.x.j.e.XxlJobExecutorSampleApplication [StartupInfoLogger.java : 61] Started XxlJobExecutorSampleApplication in 2.164 seconds (JVM running for 4.726)
+2021-11-22 15:18:25,944 INFO [Thread-11] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 86] >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 2222
+2021-11-22 15:20:08,570 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 218] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-22 15:20:08,571 INFO [Thread-11] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 96] >>>>>>>>>>> xxl-job remoting server stop.
+2021-11-22 15:20:08,574 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 87] >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='job-exector', registryValue='http://127.0.0.1:2222/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2021-11-22 15:20:08,574 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 105] >>>>>>>>>>> xxl-job, executor registry thread destory.
+2021-11-22 15:20:08,574 INFO [SpringContextShutdownHook] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 125] >>>>>>>>>>> xxl-job remoting server destroy success.
+2021-11-22 15:20:08,575 INFO [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 99] >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destory.
+2021-11-22 15:20:08,576 INFO [xxl-job, executor TriggerCallbackThread] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 98] >>>>>>>>>>> xxl-job, executor callback thread destory.
+2021-11-22 15:20:08,576 INFO [Thread-10] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 128] >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2021-11-22 15:20:17,160 INFO [main] c.x.j.e.XxlJobExecutorSampleApplication [StartupInfoLogger.java : 55] Starting XxlJobExecutorSampleApplication using Java 1.8.0_181 on yangtedeMacBook-Pro.local with PID 3561 (/Users/yangte/shangjan/workspace/personal_workpsace/xxl-job-master/xxl-job-executor-samples/xxl-job-executor-sample-springboot/target/classes started by yangte in /Users/yangte/shangjan/workspace/personal_workpsace)
+2021-11-22 15:20:17,165 INFO [main] c.x.j.e.XxlJobExecutorSampleApplication [SpringApplication.java : 675] No active profile set, falling back to default profiles: default
+2021-11-22 15:20:18,546 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8081 (http)
+2021-11-22 15:20:18,557 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8081"]
+2021-11-22 15:20:18,557 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2021-11-22 15:20:18,558 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-11-22 15:20:18,613 INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2021-11-22 15:20:18,613 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 289] Root WebApplicationContext: initialization completed in 1117 ms
+2021-11-22 15:20:18,673 INFO [main] c.x.j.e.core.config.XxlJobConfig [XxlJobConfig.java : 46] >>>>>>>>>>> xxl-job config init.
+2021-11-22 15:20:18,803 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 181] Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-22 15:20:19,019 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:my-xxl-job, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@441fbe89[class com.xxl.job.executor.service.jobhandler.MyJobHandler#execute]
+2021-11-22 15:20:19,021 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:my-xxl-job-test-1, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@1642eeae[class com.xxl.job.executor.service.jobhandler.MyJobHandler#execute]
+2021-11-22 15:20:19,022 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@3440e9cd[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#shardingJobHandler]
+2021-11-22 15:20:19,022 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@28a9494b[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#commandJobHandler]
+2021-11-22 15:20:19,022 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@a09303[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#demoJobHandler]
+2021-11-22 15:20:19,022 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@1163a27[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#httpJobHandler]
+2021-11-22 15:20:19,022 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler2, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@322ba549[class com.xxl.job.executor.service.jobhandler.SampleXxlJob#demoJobHandler2]
+2021-11-22 15:20:19,080 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-executor-samples"
+java.text.ParseException: Unparseable date: "xxl-job-executor-samples"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 15:20:19,080 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-core"
+java.text.ParseException: Unparseable date: "xxl-job-core"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 15:20:19,081 ERROR [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 71] Unparseable date: "xxl-job-admin"
+java.text.ParseException: Unparseable date: "xxl-job-admin"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.xxl.job.core.thread.JobLogFileCleanThread$1.run(JobLogFileCleanThread.java:69)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 15:20:19,081 WARN [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 152] >>>>>>>>>>> xxl-job accessToken is empty. To ensure system security, please set the accessToken.
+2021-11-22 15:20:19,090 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8081"]
+2021-11-22 15:20:19,123 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8081 (http) with context path ''
+2021-11-22 15:20:19,134 INFO [main] c.x.j.e.XxlJobExecutorSampleApplication [StartupInfoLogger.java : 61] Started XxlJobExecutorSampleApplication in 2.489 seconds (JVM running for 3.921)
+2021-11-22 15:20:19,252 INFO [Thread-10] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 86] >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 2222
+2021-11-22 15:20:40,799 INFO [xxl-rpc, EmbedServer bizThreadPool-1923505385] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 188] >>>>>>>>>>> xxl-job regist JobThread success, jobId:3, handler:com.xxl.job.core.handler.impl.MethodJobHandler@1642eeae[class com.xxl.job.executor.service.jobhandler.MyJobHandler#execute]
+2021-11-22 15:20:40,805 INFO [Thread-17] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 33] 定时任务分片序号 >> >> >> 0
+2021-11-22 15:20:40,805 INFO [Thread-17] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 34] 定时任务传总分片数 >> >> >> 1
+2021-11-22 15:20:40,805 INFO [Thread-17] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 36] 定时任务传递参数 >> >> >> param=100
+2021-11-22 15:22:13,894 INFO [Thread-17] com.xxl.job.core.thread.JobThread [JobThread.java : 247] >>>>>>>>>>> xxl-job JobThread stoped, hashCode:Thread[Thread-17,10,main]
+2021-11-22 15:24:20,018 INFO [xxl-rpc, EmbedServer bizThreadPool-1929647669] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 188] >>>>>>>>>>> xxl-job regist JobThread success, jobId:3, handler:com.xxl.job.core.handler.impl.MethodJobHandler@1642eeae[class com.xxl.job.executor.service.jobhandler.MyJobHandler#execute]
+2021-11-22 15:24:20,020 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 33] 定时任务分片序号 >> >> >> 1
+2021-11-22 15:24:20,020 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 34] 定时任务传总分片数 >> >> >> 2
+2021-11-22 15:24:20,020 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 36] 定时任务传递参数 >> >> >> param=100
+2021-11-22 15:24:30,018 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 33] 定时任务分片序号 >> >> >> 1
+2021-11-22 15:24:30,018 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 34] 定时任务传总分片数 >> >> >> 2
+2021-11-22 15:24:30,018 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 36] 定时任务传递参数 >> >> >> param=100
+2021-11-22 15:24:40,018 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 33] 定时任务分片序号 >> >> >> 1
+2021-11-22 15:24:40,018 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 34] 定时任务传总分片数 >> >> >> 2
+2021-11-22 15:24:40,018 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 36] 定时任务传递参数 >> >> >> param=100
+2021-11-22 15:24:50,011 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 33] 定时任务分片序号 >> >> >> 1
+2021-11-22 15:24:50,012 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 34] 定时任务传总分片数 >> >> >> 2
+2021-11-22 15:24:50,012 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 36] 定时任务传递参数 >> >> >> param=100
+2021-11-22 15:25:00,023 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 33] 定时任务分片序号 >> >> >> 1
+2021-11-22 15:25:00,023 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 34] 定时任务传总分片数 >> >> >> 2
+2021-11-22 15:25:00,023 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 36] 定时任务传递参数 >> >> >> param=100
+2021-11-22 15:25:10,022 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 33] 定时任务分片序号 >> >> >> 1
+2021-11-22 15:25:10,022 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 34] 定时任务传总分片数 >> >> >> 2
+2021-11-22 15:25:10,022 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 36] 定时任务传递参数 >> >> >> param=100
+2021-11-22 15:25:20,016 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 33] 定时任务分片序号 >> >> >> 1
+2021-11-22 15:25:20,016 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 34] 定时任务传总分片数 >> >> >> 2
+2021-11-22 15:25:20,017 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 36] 定时任务传递参数 >> >> >> param=100
+2021-11-22 15:25:30,019 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 33] 定时任务分片序号 >> >> >> 1
+2021-11-22 15:25:30,019 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 34] 定时任务传总分片数 >> >> >> 2
+2021-11-22 15:25:30,019 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 36] 定时任务传递参数 >> >> >> param=100
+2021-11-22 15:25:40,029 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 33] 定时任务分片序号 >> >> >> 1
+2021-11-22 15:25:40,029 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 34] 定时任务传总分片数 >> >> >> 2
+2021-11-22 15:25:40,030 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 36] 定时任务传递参数 >> >> >> param=100
+2021-11-22 15:25:50,015 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 33] 定时任务分片序号 >> >> >> 1
+2021-11-22 15:25:50,015 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 34] 定时任务传总分片数 >> >> >> 2
+2021-11-22 15:25:50,015 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 36] 定时任务传递参数 >> >> >> param=100
+2021-11-22 15:26:00,017 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 33] 定时任务分片序号 >> >> >> 1
+2021-11-22 15:26:00,018 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 34] 定时任务传总分片数 >> >> >> 2
+2021-11-22 15:26:00,018 INFO [Thread-18] c.x.j.e.s.jobhandler.SampleXxlJob [MyJobHandler.java : 36] 定时任务传递参数 >> >> >> param=100
+2021-11-22 15:26:04,277 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 218] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-22 15:26:04,278 INFO [Thread-10] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 96] >>>>>>>>>>> xxl-job remoting server stop.
+2021-11-22 15:26:04,288 ERROR [xxl-job, executor ExecutorRegistryThread] c.x.job.core.util.XxlJobRemotingUtil [XxlJobRemotingUtil.java : 139] Connection refused (Connection refused)
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:698)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1587)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:115)
+	at com.xxl.job.core.biz.client.AdminBizClient.registryRemove(AdminBizClient.java:47)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:84)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-22 15:26:04,288 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 90] >>>>>>>>>>> xxl-job registry-remove fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='job-exector', registryValue='http://127.0.0.1:2222/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused (Connection refused)), for url : http://127.0.0.1:7070/xxl-job-admin/api/registryRemove, content=null]
+2021-11-22 15:26:04,289 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 105] >>>>>>>>>>> xxl-job, executor registry thread destory.
+2021-11-22 15:26:04,290 INFO [SpringContextShutdownHook] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 125] >>>>>>>>>>> xxl-job remoting server destroy success.
+2021-11-22 15:26:04,292 INFO [Thread-18] com.xxl.job.core.thread.JobThread [JobThread.java : 247] >>>>>>>>>>> xxl-job JobThread stoped, hashCode:Thread[Thread-18,10,main]
+2021-11-22 15:26:04,293 INFO [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 99] >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destory.
+2021-11-22 15:26:04,294 INFO [xxl-job, executor TriggerCallbackThread] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 98] >>>>>>>>>>> xxl-job, executor callback thread destory.
+2021-11-22 15:26:04,295 INFO [Thread-9] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 128] >>>>>>>>>>> xxl-job, executor retry callback thread destory.

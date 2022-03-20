@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.futunn.openapi:futu-api:6.0.2508">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../maven_rep/com/futunn/openapi/futu-api/6.0.2508/futu-api-6.0.2508.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../maven_rep/com/futunn/openapi/futu-api/6.0.2508/futu-api-6.0.2508-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../maven_rep/com/futunn/openapi/futu-api/6.0.2508/futu-api-6.0.2508-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

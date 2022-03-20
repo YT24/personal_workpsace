@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.yangt.mybatis.mapper.PrJobMapper">
+    <resultMap id="PrJobMaper" type="com.example.yangt.mybatis.pojo.PrJob">
+        <id property="id" column="pr_id" />
+        <result property="name" column="pr_name" />
+        <result property="orgId" column="pr_orgId" />
+        <result property="jobCode" column="pr_jobCode" />
+        <result property="creatTime" column="pr_creatTime"/>
+    </resultMap>
+
+
+    <insert id="doAddJob" parameterType="com.example.yangt.mybatis.pojo.PrJob">
+        insert into pr_job(pr_id, pr_name, pr_orgId, pr_creatTime, pr_job_code) values (#{id},#{name},#{orgId},#{creatTime},#{jobCode})
+    </insert>
+
+    <select id="getJobByCode" resultMap="PrJobMaper" parameterType="String">
+        select * from pr_job where pr_job_code = #{jobCode}
+    </select>
+
+    <update id="updateJob" parameterType="com.example.yangt.mybatis.pojo.PrJob">
+        update pr_job set pr_name = #{name},pr_orgId = #{orgId} where pr_id = #{id}
+    </update>
+
+    <delete id="deleteJob" parameterType="com.example.yangt.mybatis.pojo.PrJob">
+        delete from pr_job where pr_id = #{id}
+    </delete>
+
+</mapper>

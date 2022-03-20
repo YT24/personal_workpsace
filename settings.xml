@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 http://maven.apache.org/xsd/settings-1.2.0.xsd">
+ 
+  <localRepository>/Users/yangte/shangjan/workspace/maven_rep</localRepository>
+  <pluginGroups />
+  <proxies />
+  <servers>
+     <!--  <server>
+        <id>nexus-releases</id>
+        <username>deploy</username>
+        <password>ZGVwbG95Cg</password>
+      </server>
+      <server>
+        <id>nexus-snapshots</id>
+        <username>deploy</username>
+        <password>ZGVwbG95Cg</password>
+      </server> -->
+  </servers>
+
+ 
+  <mirrors>
+   <!--  <mirror>
+      <id>maven-default-http-blocker</id>
+      <mirrorOf>external:http:*</mirrorOf>
+      <name>Pseudo repository to mirror external repositories initially using HTTP.</name>
+      <url>http://0.0.0.0/</url>
+      <blocked>true</blocked>
+    </mirror> -->
+    <!-- <mirror>
+      <id>nexus-releases</id>
+      <mirrorOf>central</mirrorOf>
+      <name>nexus releases</name>
+      <url>http://nexus.ops.prod.valuesimplex.tech/repository/maven-public</url>
+    </mirror> -->
+
+   <mirror>
+     <id>aliyunmaven</id>
+     <mirrorOf>*</mirrorOf>
+     <name>阿里云公共仓库</name>
+     <url>https://maven.aliyun.com/repository/public</url>
+   </mirror>
+
+    
+  </mirrors>
+
+  
+  <profiles>
+     <profile>
+      <id>nexusMaven</id>
+
+      <activation>
+        <activeByDefault>false</activeByDefault>
+        <jdk>1.8</jdk>
+      </activation>
+
+      <repositories>
+        <repository>
+          <id>nexus</id>
+          <url>http://nexus.outer.shangjian.tech:8081/repository/maven-public/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshost>
+            <enabled>true</enabled>
+          </snapshost>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>nexus</id>
+          <url>http://nexus.outer.shangjian.tech:8081/repository/maven-public/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshost>
+            <enabled>true</enabled>
+          </snapshost>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+
+  <activeProfiles>
+    <activeProfile>nexusMaven</activeProfile>
+  </activeProfiles>
+</settings>

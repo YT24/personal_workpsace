@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.yangt.mybatis.mapper.PrMenuMapper">
+    <resultMap id="PrMenuMap" type="com.example.yangt.mybatis.pojo.PrMenu">
+        <id property="pr_id" column="pr_id" />
+        <result property="pr_menuName" column="pr_menuName" />
+        <result property="pr_menuPath" column="pr_menuPath" />
+        <result property="pr_parentMenuId" column="pr_parentMenuId" />
+        <result property="pr_path" column="pr_path"/>
+        <result property="pr_level" column="pr_level"/>
+    </resultMap>
+
+
+<select id="getAllMenuList" resultType="com.example.yangt.mybatis.pojo.PrMenu" resultMap="PrMenuMap">
+    select * from pr_menu;
+</select>
+
+</mapper>
