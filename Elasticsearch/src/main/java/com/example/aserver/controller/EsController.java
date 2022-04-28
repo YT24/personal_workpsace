@@ -5,6 +5,8 @@ import com.example.aserver.entity.es.Item;
 import com.example.aserver.repository.ItemRepository;
 import com.example.aserver.service.ItemRepositoryService;
 import org.elasticsearch.client.RestHighLevelClient;
+import org.elasticsearch.index.reindex.UpdateByQueryAction;
+import org.elasticsearch.index.reindex.UpdateByQueryRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -46,11 +48,7 @@ public class EsController {
     @GetMapping("search")
     public Object search() {
 
-
-        return itemRepository.findItemByCategory("上汽");
-
-
-
+        return null;
     }
 
 

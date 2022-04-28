@@ -27,6 +27,7 @@ public abstract class ZkAbstractTemplateLock implements ZkLock{
         }else{
             waitZkLock(path);
             zkLock(path);
+            log.info("");
         }
     };
 

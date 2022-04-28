@@ -1,39 +1,57 @@
-2022-02-18 00:02:05,343 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
-2022-02-18 00:02:23,063 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=17m31s405ms).
-2022-02-18 08:05:28,700 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 779] HikariCP - Retrograde clock change detected (housekeeper delta=29s865ms), soft-evicting connections from pool.
-2022-02-18 08:22:31,454 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=17m2s754ms).
-2022-02-18 08:24:48,311 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
-2022-02-18 08:25:05,152 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=2m3s683ms).
-2022-02-18 08:40:24,908 WARN [xxl-job, admin JobFailMonitorHelper] com.zaxxer.hikari.pool.PoolBase [PoolBase.java : 184] HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@630c0a7c (Communications link failure
-
-The last packet successfully received from the server was 4,854 milliseconds ago. The last packet sent successfully to the server was 4,855 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-2022-02-18 08:40:24,933 WARN [xxl-job, admin JobFailMonitorHelper] com.zaxxer.hikari.pool.PoolBase [PoolBase.java : 184] HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@64570920 (Communications link failure
-
-The last packet successfully received from the server was 24,909 milliseconds ago. The last packet sent successfully to the server was 24,911 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-2022-02-18 08:40:24,948 WARN [xxl-job, admin JobFailMonitorHelper] com.zaxxer.hikari.pool.PoolBase [PoolBase.java : 184] HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@28b5c7f9 (Communications link failure
-
-The last packet successfully received from the server was 4,909 milliseconds ago. The last packet sent successfully to the server was 4,911 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-2022-02-18 08:40:24,955 WARN [xxl-job, admin JobFailMonitorHelper] com.zaxxer.hikari.pool.PoolBase [PoolBase.java : 184] HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1b69e1cb (Communications link failure
-
-The last packet successfully received from the server was 122,176 milliseconds ago. The last packet sent successfully to the server was 122,176 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-2022-02-18 08:40:24,962 WARN [xxl-job, admin JobFailMonitorHelper] com.zaxxer.hikari.pool.PoolBase [PoolBase.java : 184] HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@215a6369 (Communications link failure
-
-The last packet successfully received from the server was 119,896 milliseconds ago. The last packet sent successfully to the server was 119,897 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-2022-02-18 08:40:24,968 WARN [xxl-job, admin JobFailMonitorHelper] com.zaxxer.hikari.pool.PoolBase [PoolBase.java : 184] HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7d18706b (Communications link failure
-
-The last packet successfully received from the server was 118,752 milliseconds ago. The last packet sent successfully to the server was 118,752 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-2022-02-18 08:40:24,978 WARN [xxl-job, admin JobFailMonitorHelper] com.zaxxer.hikari.pool.PoolBase [PoolBase.java : 184] HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7b94fa3e (Communications link failure
-
-The last packet successfully received from the server was 117,423 milliseconds ago. The last packet sent successfully to the server was 117,423 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-2022-02-18 08:40:24,989 WARN [xxl-job, admin JobFailMonitorHelper] com.zaxxer.hikari.pool.PoolBase [PoolBase.java : 184] HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2fa72b3e (Communications link failure
-
-The last packet successfully received from the server was 110,265 milliseconds ago. The last packet sent successfully to the server was 110,265 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-2022-02-18 08:40:24,992 WARN [xxl-job, admin JobFailMonitorHelper] com.zaxxer.hikari.pool.PoolBase [PoolBase.java : 184] HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5d144488 (Communications link failure
-
-The last packet successfully received from the server was 94,866 milliseconds ago. The last packet sent successfully to the server was 94,866 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-2022-02-18 08:40:24,996 WARN [xxl-job, admin JobFailMonitorHelper] com.zaxxer.hikari.pool.PoolBase [PoolBase.java : 184] HikariCP - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6331ec69 (Communications link failure
-
-The last packet successfully received from the server was 85,527 milliseconds ago. The last packet sent successfully to the server was 85,527 milliseconds ago.). Possibly consider using a shorter maxLifetime value.
-2022-02-18 08:40:28,083 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 218] Shutting down ExecutorService 'applicationTaskExecutor'
-2022-02-18 08:40:29,086 INFO [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 212] >>>>>>>>>>> xxl-job, JobScheduleHelper#scheduleThread stop
-2022-02-18 08:40:30,006 INFO [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 264] >>>>>>>>>>> xxl-job, JobScheduleHelper#ringThread stop
+2022-04-16 00:40:44,522 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 02:40:53,603 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=3h55m29s962ms).
+2022-04-16 02:40:53,867 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 04:41:06,569 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 06:41:19,369 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 06:41:23,548 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=4h30s555ms).
+2022-04-16 08:41:31,247 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 08:47:42,828 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 10:41:33,282 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 10:41:33,663 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=4h10s115ms).
+2022-04-16 10:51:08,363 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 10:51:08,867 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=9m5s91ms).
+2022-04-16 12:24:48,577 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 12:24:51,236 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=5m11s755ms).
+2022-04-16 12:37:58,884 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 12:38:04,157 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=13m12s921ms).
+2022-04-16 13:05:34,456 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 13:05:46,303 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=5m11s887ms).
+2022-04-16 13:57:31,051 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 13:57:45,380 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=51m59s77ms).
+2022-04-16 14:09:08,311 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 14:09:10,821 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=55s299ms).
+2022-04-16 14:14:40,884 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 14:14:52,684 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=5m11s872ms).
+2022-04-16 14:20:13,883 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 14:20:34,500 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=5m11s807ms).
+2022-04-16 14:25:46,523 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=5m12s23ms).
+2022-04-16 14:25:47,828 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 14:31:20,831 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 14:31:28,359 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=5m11s830ms).
+2022-04-16 14:36:53,879 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 14:37:10,244 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=5m11s877ms).
+2022-04-16 14:40:37,150 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 14:41:02,423 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=3m22s173ms).
+2022-04-16 14:59:13,916 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 14:59:14,460 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=5m11s931ms).
+2022-04-16 15:04:47,834 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 15:04:56,426 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=5m11s839ms).
+2022-04-16 15:10:20,805 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 15:10:38,217 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=5m11s786ms).
+2022-04-16 15:15:54,862 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 15:16:20,084 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=5m11s860ms).
+2022-04-16 15:21:27,859 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 15:21:31,942 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=5m11s859ms).
+2022-04-16 15:25:51,049 WARN [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 88] >>>>>>>>>>> xxl-job, schedule misfire, jobId = 4
+2022-04-16 15:26:03,988 WARN [HikariCP housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 787] HikariCP - Thread starvation or clock leap detected (housekeeper delta=4m2s49ms).
+2022-04-16 15:39:01,446 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java : 218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-16 15:39:02,454 INFO [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 212] >>>>>>>>>>> xxl-job, JobScheduleHelper#scheduleThread stop
+2022-04-16 15:39:03,002 INFO [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 264] >>>>>>>>>>> xxl-job, JobScheduleHelper#ringThread stop
+2022-04-16 15:39:03,458 INFO [SpringContextShutdownHook] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 353] >>>>>>>>>>> xxl-job, JobScheduleHelper stop
+2022-04-16 15:39:03,459 INFO [xxl-job, admin JobLogReportHelper] c.x.j.a.c.thread.JobLogReportHelper [JobLogReportHelper.java : 132] >>>>>>>>>>> xxl-job, job log report thread stop
+2022-04-16 15:39:03,459 INFO [xxl-job, admin JobLosedMonitorHelper] c.x.j.a.c.thread.JobCompleteHelper [JobCompleteHelper.java : 111] >>>>>>>>>>> xxl-job, JobLosedMonitorHelper stop
+2022-04-16 15:39:03,459 INFO [xxl-job, admin JobFailMonitorHelper] c.x.j.a.c.t.JobFailMonitorHelper [JobFailMonitorHelper.java : 90] >>>>>>>>>>> xxl-job, job fail monitor thread stop
+2022-04-16 15:39:03,461 INFO [xxl-job, admin JobRegistryMonitorHelper-registryMonitorThread] c.x.j.a.c.thread.JobRegistryHelper [JobRegistryHelper.java : 123] >>>>>>>>>>> xxl-job, job registry monitor thread stop
+2022-04-16 15:39:03,462 INFO [SpringContextShutdownHook] c.x.j.a.c.t.JobTriggerPoolHelper [JobTriggerPoolHelper.java : 60] >>>>>>>>> xxl-job trigger thread pool shutdown success.
+2022-04-16 15:39:03,465 INFO [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java : 350] HikariCP - Shutdown initiated...
+2022-04-16 15:39:03,470 INFO [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java : 352] HikariCP - Shutdown completed.

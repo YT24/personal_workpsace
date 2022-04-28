@@ -45,7 +45,7 @@ public class KafkaConfig {
         properties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,value);
         properties.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,server);
 
-      /*  // 重试次数，0为不启用重试机制
+        // 重试次数，0为不启用重试机制
         properties.put(ProducerConfig.RETRIES_CONFIG, 0);
         //同步到副本, 默认为1
         // acks=0 把消息发送到kafka就认为发送成功
@@ -64,7 +64,7 @@ public class KafkaConfig {
         properties.put(ProducerConfig.MAX_REQUEST_SIZE_CONFIG,1048576);
         // 压缩消息，支持四种类型，分别为：none、lz4、gzip、snappy，默认为none。
         // 消费者默认支持解压，所以压缩设置在生产者，消费者无需设置。
-        properties.put(ProducerConfig.COMPRESSION_TYPE_CONFIG,"none");*/
+        properties.put(ProducerConfig.COMPRESSION_TYPE_CONFIG,"none");
 
         //添加拦截器
         properties.setProperty(ProducerConfig.INTERCEPTOR_CLASSES_CONFIG, "com.example.yangt.middleware.kafka.KafkaInterceptor");

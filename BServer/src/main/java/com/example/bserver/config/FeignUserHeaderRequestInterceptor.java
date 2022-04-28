@@ -14,11 +14,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-/**
- * feign传递header
- * @author yangte
- * @date 2021-07-19 4:55 下午
- **/
 @Slf4j
 @Component
 public class FeignUserHeaderRequestInterceptor implements RequestInterceptor {

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--配置classA对象-->
+    <bean id="classA" class="com.example.aserver.cyclicDependence.ClassA">
+        <!--用set方式注入dao-->
+        <property name="classB" ref="classB"/>
+    </bean>
+
+    <!--配置classB对象-->
+    <bean id="classB" class="com.example.aserver.cyclicDependence.ClassB">
+        <!--用set方式注入QueryRunner-->
+        <property name="classA" ref="classA"/>
+    </bean>
+
+   <!-- <bean id="classC" class="com.example.yangt.spring.cyclicDependence.ClassC" scope="singleton">
+        <property name="name" value="classC"/>
+        <property name="age"  value="1234"/>
+    </bean>-->
+
+
+</beans>
