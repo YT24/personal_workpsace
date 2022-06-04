@@ -1,4 +1,4 @@
-Thu Jun 02 17:04:58 CST 2022 Thread[Thread-17,5,main] Cleanup action starting
+Sat Jun 04 19:05:45 CST 2022 Thread[Thread-17,5,main] Cleanup action starting
 java.sql.SQLException: Failed to start database '/Users/yangte/shangjan/workspace/personal_workpsace/nacos/data/derby-data' with class loader org.springframework.boot.loader.LaunchedURLClassLoader@728938a9, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)

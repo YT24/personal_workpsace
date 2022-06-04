@@ -2,7 +2,9 @@ package com.example.yangt.thread.lock.consumerAndproducer;
 
 
 class AirCondition{
+
     private int number = 0;
+
     public synchronized void increment() throws Exception{
         // 判断
         while (number !=0){

@@ -5,6 +5,8 @@ server:
 spring:
   application:
     name: bserver
+  encrypt:
+    key: 1234567812345678
 #  kafka:
 #    bootstrap-servers: 192.168.101.26:9092
 #    producer:

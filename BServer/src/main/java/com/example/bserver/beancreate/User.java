@@ -16,6 +16,7 @@ import javax.annotation.PostConstruct;
 public class User {
 
     private Long id;
+
     private String name;
 
     @Autowired

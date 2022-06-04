@@ -2,9 +2,7 @@ package com.example.bserver.expection;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.List;
@@ -18,6 +16,7 @@ import java.util.List;
 @ToString
 @NoArgsConstructor
 @ApiModel(value = "返回内容", description = "接口返回的对象内容")
+@Data
 public class ResponseResult<T> implements Serializable {
     private static final long serialVersionUID = -1528921062052319020L;
 
@@ -26,21 +25,24 @@ public class ResponseResult<T> implements Serializable {
         this.msg = returnCode.getMessage();
     }
 
-    @Getter
+
     @ApiModelProperty(value = "返回状态（200：成功 500：失败）", example = "0", position = 1)
     private int code;
 
-    @Getter
+
     @ApiModelProperty(value = "返回信息", example = "成功", position = 2)
     private String msg;
 
-    @Getter
     @ApiModelProperty(value = "返回数据", position = 3)
     private T data;
 
     private ResponseResult<T> setData(T data) {
         this.data = data;
         return this;
+    }
+
+    public void setResponseData(T data){
+        this.data = data;
     }
 
     /**

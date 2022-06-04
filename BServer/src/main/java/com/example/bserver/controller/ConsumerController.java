@@ -30,12 +30,6 @@ public class ConsumerController {
     @Value("${login.username:null}")
     private String username;
 
-    /**
-     * 注入spring 事件发布器
-     */
-    @Autowired
-    private ApplicationEventPublisher eventPublisher;
-
     @Autowired
     private TokenService tokenService;
 
@@ -55,22 +49,6 @@ public class ConsumerController {
         return tokenService.getToken();
     }
 
-
-
-    @ApiImplicitParams({
-            @ApiImplicitParam(name = "title",value = "标题",paramType = "query",required = true),
-            @ApiImplicitParam(name = "content",value = "内容",paramType = "query",required = true),
-    })
-    @RequestMapping("/publish")
-    public String publish(@RequestParam("title") String title, @RequestParam("content")String content) {
-        NoticeEvent event = new NoticeEvent(title, content);
-        System.out.println("接口收到请求，内容如下：");
-        System.out.println(event);
-        eventPublisher.publishEvent(event);
-        String ret = "事件发布成功";
-        System.out.println(ret);
-        return ret;
-    }
 
 
     static ThreadLocal<String> localVar = new ThreadLocal<>();
