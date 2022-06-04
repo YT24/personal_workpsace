@@ -22,7 +22,7 @@ public class RedisQueueListener implements Runnable {
     private RedisQueueConsumer redisQueueConsumer;
 
     @Autowired
-    RedisTemplate redisTemplate;
+    private RedisTemplate redisTemplate;
 
     public RedisQueueListener(RedisQueueConsumer redisQueueConsumer) {
         this.redisQueueConsumer = redisQueueConsumer;

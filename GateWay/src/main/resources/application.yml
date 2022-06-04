@@ -1,19 +1,16 @@
 spring:
   application:
-    name: GateWay
+    name: gateway
   cloud:
-#    gateway:
-#      routes:
-#        - id: test-id-1
-#          uri: http://www.baidu.com
-#          predicates:
-#            - Method=GET
-#        - id: test-id-2
-#          uri: http://127.0.0.1:9090/api/v1
-#          predicates:
-#            - Path=/**
-#          filters:
-#            - PrefixPath=/app/**
+    gateway:
+      routes:
+        - id: bserver
+          uri: lb://bserver
+          predicates:
+            - Path=/bserver/**
+          filters:
+            - StripPrefix=1
+
 #    nacos:
 #      config:
 #        file-extension: yaml
@@ -25,3 +22,32 @@ spring:
 #        server-addr: 127.0.0.1:8848
       discovery:
         server-addr: 127.0.0.1:8848
+
+
+
+#熔断器配置
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          strategy: SEMAPHORE
+#          thread:
+#            timeoutInMilliseconds: 3000
+#  shareSecurityContext: true
+
+#网关日志输出
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
+
+
+yt:
+  allow:
+    paths:
+      - /api/v1
+      - /api/v2
+      - /test

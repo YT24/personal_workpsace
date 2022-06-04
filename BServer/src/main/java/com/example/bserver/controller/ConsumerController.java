@@ -1,73 +1,89 @@
 package com.example.bserver.controller;
 
-import com.example.bserver.fegin.NacosFegin;
-import com.example.bserver.kafka.KafkaSender;
+import com.example.bserver.annotation.AutoIdempotent;
+import com.example.bserver.aop.UserToHolder;
+import com.example.bserver.beancreate.User;
+import com.example.bserver.event.NoticeEvent;
+import com.example.bserver.token.TokenService;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.concurrent.ExecutionException;
+import javax.annotation.PostConstruct;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 @RefreshScope // nacos 配置修改时自动刷新
 @RestController
 public class ConsumerController {
 
 
-//    @Autowired
-//    private KafkaTopicService kafkaTopicService;
-//
-//    @Autowired
-//    private KafkaSender kafkaSender;
-//
-//    @Autowired
-//    private NacosFegin nacosFegin;
-
 
     @Value("${login.username:null}")
     private String username;
 
+    /**
+     * 注入spring 事件发布器
+     */
+    @Autowired
+    private ApplicationEventPublisher eventPublisher;
 
+    @Autowired
+    private TokenService tokenService;
+
+    @Autowired
+    private User user;
+
+    @AutoIdempotent
     @GetMapping("/test")
-    public String login() {
-        System.out.println("username：" + username);
-        return "SUCCESS";
+    public String login(@RequestBody Map map) throws InterruptedException {
+
+        return UserToHolder.getUserTo().toString();
     }
-//
-//
-//    @PostMapping("/kafka/topic")
-//    public String createTopic(){
-//        kafkaTopicService.createTopic("kafka-topic-1");
-//        return "SUCCESS";
-//    }
-//
-//    @GetMapping("/kafka/topic")
-//    public Object queryTopic() throws ExecutionException, InterruptedException {
-//
-//        return kafkaTopicService.queryTopicList();
-//    }
-//
-//
-//    @PostMapping("/kafka/msg")
-//    public void msgSend() throws ExecutionException, InterruptedException {
-//
-//        kafkaSender.sendStr("123456789qwertyuio");
-//
-//    }
+
+    @GetMapping("/token")
+    public String login() throws InterruptedException {
+
+        return tokenService.getToken();
+    }
+
+
+
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "title",value = "标题",paramType = "query",required = true),
+            @ApiImplicitParam(name = "content",value = "内容",paramType = "query",required = true),
+    })
+    @RequestMapping("/publish")
+    public String publish(@RequestParam("title") String title, @RequestParam("content")String content) {
+        NoticeEvent event = new NoticeEvent(title, content);
+        System.out.println("接口收到请求，内容如下：");
+        System.out.println(event);
+        eventPublisher.publishEvent(event);
+        String ret = "事件发布成功";
+        System.out.println(ret);
+        return ret;
+    }
 
 
     static ThreadLocal<String> localVar = new ThreadLocal<>();
-
+    // 实现父子线程共享
+    static InheritableThreadLocal<Integer> threadLocal = new InheritableThreadLocal<>();
     static void print(String str) {
         //打印当前线程中本地内存中本地变量的值
         System.out.println(str + " :" + localVar.get());
         // 清除本地内存中的本地变量
-       // localVar.remove();
+        // localVar.remove();
     }
 
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         Thread t1 = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -96,6 +112,75 @@ public class ConsumerController {
         });
         t2.start();
 
+
+        InheritableThreadLocal<Integer> threadLocal = new InheritableThreadLocal<>();
+        threadLocal.set(6);
+        System.out.println("父线程获取数据：" + threadLocal.get());
+
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+
+        threadLocal.set(6);
+        executorService.submit(() -> {
+            System.out.println("第一次从线程池中获取数据：" + threadLocal.get());
+        });
+
+        threadLocal.set(7);
+        executorService.submit(() -> {
+            System.out.println("第二次从线程池中获取数据：" + threadLocal.get());
+        });
+
+
     }
 
+
+    public static void main(String[] args) {
+        Lock lock = new ReentrantLock();
+        lock.lock();
+        try {
+//            LinkedList list = new LinkedList();
+//            list.add("1");
+//
+//            Queue queue = new LinkedBlockingQueue();
+//            queue.add(1);
+//            queue.add(2);
+//            queue.add(3);
+//            System.out.println(queue.poll());
+
+            //LinkedHashMap map = new LinkedHashMap();
+            HashMap<String,Object> map = new HashMap();
+            ConcurrentHashMap<String,Object> cmap = new ConcurrentHashMap();
+            cmap.put("A",1);
+            map.put("a",1);
+            map.put("b",2);
+            map.put("c",3);
+            //1
+            Iterator iterator = map.entrySet().iterator();
+            while (iterator.hasNext()){
+                Map.Entry entry = (Map.Entry) iterator.next();
+                System.out.println("key:" + entry.getKey() + "   value:" + entry.getValue());
+            }
+            //2 
+            for (String o : map.keySet()) {
+                
+            }
+            //3
+            for (Map.Entry<String, Object> entry : map.entrySet()) {
+                entry.getKey();
+                entry.getValue();
+            }
+
+            Collections.synchronizedMap(map);
+
+            List<Integer> list = new ArrayList<>();
+            list.add(1);
+            list.stream().forEach(integer -> {
+                System.out.println(integer);
+            });
+
+        }finally {
+            lock.unlock();
+        }
+
+
+    }
 }

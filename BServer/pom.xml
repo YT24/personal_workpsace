@@ -18,8 +18,33 @@
         <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
         <spring-cloud-alibaba.version>2.2.3.RELEASE</spring-cloud-alibaba.version>
         <spring-boot.version>2.3.12.RELEASE</spring-boot.version>
+        <swagger.version>3.0.0</swagger.version>
     </properties>
     <dependencies>
+
+        <!--caffeine 本地缓存-->
+        <dependency>
+            <groupId>com.github.ben-manes.caffeine</groupId>
+            <artifactId>caffeine</artifactId>
+            <version>2.3.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>${swagger.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
 
         <!--服务注册/发现中心依赖-->
         <dependency>
@@ -56,6 +81,7 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.10</version>
         </dependency>
+
         <!--    openfegin    -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -83,6 +109,17 @@
             <version>2.0.1</version>
         </dependency>
 
+        <!-- JWT依赖 -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>3.18.2</version>
+        </dependency>
 
     </dependencies>
 

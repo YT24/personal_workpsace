@@ -3,11 +3,14 @@ package com.example.aserver.cyclicDependence;
 import lombok.Data;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.beans.factory.config.BeanPostProcessor;
 
 @Slf4j
 @Data
 @ToString
-public class ClassB {
+@Aspect
+public class ClassB implements BeanPostProcessor {
 
 
     private ClassA classA;

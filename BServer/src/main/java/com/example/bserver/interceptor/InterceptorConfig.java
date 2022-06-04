@@ -10,16 +10,17 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @AllArgsConstructor
 public class InterceptorConfig extends WebMvcConfigurerAdapter {
 
-    @Autowired
-    private Inteceptor1 inteceptor1;
 
     @Autowired
-    private Inteceptor2 inteceptor2;
+    private IdempotentInteceptor idempotentInteceptor;
+
+    @Autowired
+    private TokenInterceptor tokenInterceptor;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(inteceptor2).addPathPatterns("/**");
-        registry.addInterceptor(inteceptor1).addPathPatterns("/**");
+        registry.addInterceptor(tokenInterceptor).addPathPatterns("/**");
+        registry.addInterceptor(idempotentInteceptor).addPathPatterns("/**");
     }
 }
 

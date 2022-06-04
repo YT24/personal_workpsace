@@ -8,9 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 @Slf4j
 @RestController
@@ -20,6 +24,13 @@ public class LoginController {
 
     @Autowired
     private ThreadPoolExecutor threadPoolExecutor;
+
+
+    public static void main(String[] args) {
+        Lock lock = new ReentrantLock();
+        boolean flag = Boolean.TRUE;
+
+    }
 
 
     @GetMapping("login")
