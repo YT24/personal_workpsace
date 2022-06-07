@@ -4,6 +4,7 @@ public abstract class AbstractClass {
     // 共同的且繁琐的操作
     private void baseOperation() {
         // do something
+        System.out.println("AbstractClass baseOperation 共同的且繁琐的操作");
     }
 
     // 由子类定制的操作

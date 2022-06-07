@@ -11,6 +11,7 @@
         <module name="elasticsearch" />
         <module name="GateWay" />
         <module name="BServer" />
+        <module name="Spring-Security" />
         <module name="AServer" />
         <module name="consumer" />
       </profile>
@@ -45,6 +46,7 @@
       <module name="server2" target="1.8" />
       <module name="server2 (1)" target="8" />
       <module name="sharding-jdbc" target="1.8" />
+      <module name="Spring-Security" target="8" />
       <module name="visual-monitor" target="1.8" />
       <module name="xxl-job" target="1.8" />
       <module name="xxl-job-admin" target="1.8" />
@@ -61,6 +63,7 @@
       <module name="AServer" options="-parameters" />
       <module name="BServer" options="-parameters" />
       <module name="GateWay" options="-parameters" />
+      <module name="Spring-Security" options="-parameters" />
       <module name="XxlJobRegister" options="-parameters" />
       <module name="aserver" options="-parameters" />
       <module name="bserver" options="-parameters" />

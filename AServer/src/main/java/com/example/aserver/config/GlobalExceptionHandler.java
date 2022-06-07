@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * 全局异常处理
  *
- * @author Wilson
- * @date 2021-06-23 4:30 下午
  **/
 @ControllerAdvice
 class GlobalExceptionHandler {

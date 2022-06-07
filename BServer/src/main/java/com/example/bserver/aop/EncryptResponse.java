@@ -18,9 +18,12 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 @EnableConfigurationProperties(EncryptProperties.class)
 @ControllerAdvice
 public class EncryptResponse implements ResponseBodyAdvice<ResponseResult> {
+
     private ObjectMapper om = new ObjectMapper();
+
     @Autowired
     EncryptProperties encryptProperties;
+
     @Override
     public boolean supports(MethodParameter returnType, Class<? extends HttpMessageConverter<?>> converterType) {
         return returnType.hasMethodAnnotation(Encrypt.class);
