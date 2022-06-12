@@ -10,5 +10,7 @@ public class SpringSecurityApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringSecurityApplication.class, args);
+        System.out.println(2134567890);
     }
+
 }
