@@ -56,6 +56,7 @@ under the License.
 
 <!--  1-->
   <!--  2-->
+  <!--  2-->
   <!-- interactiveMode
    | This will determine whether maven prompts you when it needs input. If set to false,
    | maven will use a sensible default value, perhaps based on some other setting, for
