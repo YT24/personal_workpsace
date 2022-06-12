@@ -13,7 +13,6 @@
         <option value="$PROJECT_DIR$/BServer/pom.xml" />
         <option value="$PROJECT_DIR$/AServer/pom.xml" />
         <option value="$PROJECT_DIR$/server/pom.xml" />
-        <option value="$PROJECT_DIR$/sharding-jdbc/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
