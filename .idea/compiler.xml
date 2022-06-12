@@ -8,10 +8,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="server" />
+        <module name="sharding-jdbc" />
         <module name="elasticsearch" />
         <module name="GateWay" />
         <module name="BServer" />
-        <module name="Spring-Security" />
         <module name="AServer" />
         <module name="consumer" />
       </profile>
