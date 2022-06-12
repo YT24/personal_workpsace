@@ -19,6 +19,9 @@ public class GateWayApplication {
         SpringApplication.run(GateWayApplication.class, args);
         System.out.println(1);
         System.out.println(1);
+        System.out.println(1);
+        System.out.println(1);
+        System.out.println(1);
     }
 
 
