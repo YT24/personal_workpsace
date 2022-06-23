@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    master:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/goods_db_1
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    slave:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/goods_db_2
+      username: root   # 只读账户
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
