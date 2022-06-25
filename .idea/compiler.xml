@@ -11,6 +11,7 @@
         <module name="AServer" />
         <module name="GateWay" />
         <module name="BServer" />
+        <module name="ReadwriteSeparation" />
         <module name="server" />
         <module name="consumer" />
         <module name="elasticsearch" />
@@ -41,11 +42,11 @@
       <module name="kmp-visual" target="1.8" />
       <module name="manba" target="1.8" />
       <module name="personal_workpsace" target="1.8" />
+      <module name="ReadwriteSeparation" target="1.8" />
       <module name="server" target="1.8" />
       <module name="server1" target="1.8" />
       <module name="server2" target="1.8" />
       <module name="server2 (1)" target="8" />
-      <module name="sharding-jdbc" target="1.8" />
       <module name="ShardingJDBC" target="1.8" />
       <module name="Spring-Security" target="8" />
       <module name="visual-monitor" target="1.8" />
@@ -64,6 +65,7 @@
       <module name="AServer" options="-parameters" />
       <module name="BServer" options="-parameters" />
       <module name="GateWay" options="-parameters" />
+      <module name="ReadwriteSeparation" options="-parameters" />
       <module name="ShardingJDBC" options="-parameters" />
       <module name="Spring-Security" options="-parameters" />
       <module name="XxlJobRegister" options="-parameters" />
@@ -76,7 +78,6 @@
       <module name="elasticsearch" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="server" options="-parameters" />
-      <module name="sharding-jdbc" options="-parameters" />
     </option>
   </component>
 </project>

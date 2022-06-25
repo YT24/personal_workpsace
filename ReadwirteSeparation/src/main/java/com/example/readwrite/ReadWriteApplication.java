@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 
 
-@MapperScan("com.example.readwrite.mapper")
+@MapperScan(basePackages = "com.example.readwrite.mapper")
 @SpringBootApplication(scanBasePackages = "com.example.readwrite")
 public class ReadWriteApplication {
 

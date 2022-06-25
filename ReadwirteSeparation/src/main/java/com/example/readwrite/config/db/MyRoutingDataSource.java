@@ -11,6 +11,7 @@ public class MyRoutingDataSource extends AbstractRoutingDataSource {
   @Nullable
   @Override
   protected Object determineCurrentLookupKey() {
+    System.out.println("线程名："+Thread.currentThread().getName()+":"+DBContextHolder.get());
     return DBContextHolder.get();
   }
 }

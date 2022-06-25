@@ -14,30 +14,21 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class ReadWriteApplicationTests {
 
 
-   @Autowired GoodsService goodsService;
-
-
-    @Test
-    void addGoods() {
-
-        goodsService.insert();
-
-    }
-
     @Autowired
-    private GoodsMapper goodsMapper;
+    GoodsService goodsService;
 
 
     @Test
-    public void insert(){
-        Goods good = new Goods();
-        good.setGname("三星");
-        good.setUserId(2010L);
-        good.setGstatus("已发布");
-        goodsMapper.insert(good);
+    public void insert() {
+        System.out.println(goodsService.list());
+
+
+//                Goods good = new Goods();
+//        good.setGname("三星");
+//        good.setUserId(2010L);
+//        good.setGstatus("已发布");
+//        goodsService.save(good);good
     }
-
-
 
 
 }
