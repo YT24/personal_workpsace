@@ -3,16 +3,16 @@ package com.example.aserver.controller;
 
 import com.example.aserver.anntion.Demo;
 import com.example.aserver.anntion.Info;
+import com.example.aserver.entity.properties.ThreadPoolProperties;
+import com.example.aserver.service.LoginService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -26,15 +26,42 @@ public class LoginController {
     private ThreadPoolExecutor threadPoolExecutor;
 
 
-    public static void main(String[] args) {
+
+
+    @GetMapping("te")
+    public String te(){
         Lock lock = new ReentrantLock();
-        boolean flag = Boolean.TRUE;
+        lock.lock();
+        try {
+            Thread.sleep(100000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
+            lock.unlock();
+        }
+
+
+
+        return null;
+    }
+
+    public static void main(String[] args) {
+        ServiceLoader<LoginService> properties = ServiceLoader.load(LoginService.class);
+        properties.forEach(loginService -> {
+            System.out.println("登录方式："+loginService.login(null,null));
+        });
 
     }
 
 
     @GetMapping("login")
     public String login(){
+
+        ServiceLoader<ThreadPoolProperties> properties = ServiceLoader.load(ThreadPoolProperties.class);
+        properties.forEach(threadPoolProperties -> {
+            System.out.println(threadPoolProperties.getCorePoolSize());
+        });
+
 
         Demo demo = new Demo();
         Class<? extends Demo> aClass = demo.getClass();

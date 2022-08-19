@@ -26,4 +26,4 @@
 FROM openjdk:8-jre-alpine
 ADD target/BServer-0.0.1-SNAPSHOT.jar target/BServer.jar
 EXPOSE 8888
-ENTRYPOINT ["java", "-jar","-Xmx2048m","-Xms128m", "target/BServer.jar"]
+ENTRYPOINT ["java", "-jar","-Xmx100m","-Xms50m", "target/BServer.jar"]

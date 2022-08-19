@@ -17,5 +17,5 @@ tag="v1.3"
 mirror="yangte8240606/demo"
 echo 开始构建镜像...
 docker build  -f Dockerfile -t $mirror:$tag .
-docker login --password="yt1234567890" --username="yangte8240606"
-docker push $mirror:$tag
+#docker login --password="yt1234567890" --username="yangte8240606"
+#docker push $mirror:$tag

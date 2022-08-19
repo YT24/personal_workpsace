@@ -1,7 +1,5 @@
 package com.example.shardingjdbc.bean;
- 
-import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.Data;
+
 import lombok.Setter;
 
 public class Goods {

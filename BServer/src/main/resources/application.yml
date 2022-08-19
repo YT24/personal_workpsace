@@ -1,8 +1,11 @@
 server:
   port: 8888
 
-
 spring:
+  cloud:
+    discovery:
+      server-addr: http://127.0.0.1:8848
+
   application:
     name: bserver
   encrypt:
@@ -29,6 +32,7 @@ spring:
 #      auto-commit-interval: 100
 #      max-poll-records: 5
 #debug: false
+
 
 
 config:

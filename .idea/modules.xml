@@ -8,7 +8,8 @@
       <module fileurl="file://$PROJECT_DIR$/ShardingJDBC/ShardingJDBC.iml" filepath="$PROJECT_DIR$/ShardingJDBC/ShardingJDBC.iml" />
       <module fileurl="file://$PROJECT_DIR$/Elasticsearch/elasticsearch.iml" filepath="$PROJECT_DIR$/Elasticsearch/elasticsearch.iml" />
       <module fileurl="file://$PROJECT_DIR$/server/server.iml" filepath="$PROJECT_DIR$/server/server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc.iml" filepath="$PROJECT_DIR$/sharding-jdbc/sharding-jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ShardingJDBC/sharding-jdbc.iml" filepath="$PROJECT_DIR$/ShardingJDBC/sharding-jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spi/spi.iml" filepath="$PROJECT_DIR$/spi/spi.iml" />
     </modules>
   </component>
 </project>

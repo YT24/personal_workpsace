@@ -7,13 +7,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ShardingJDBC" />
-        <module name="AServer" />
+        <module name="server" />
+        <module name="sharding-jdbc" />
+        <module name="elasticsearch" />
         <module name="GateWay" />
         <module name="BServer" />
-        <module name="server" />
+        <module name="AServer" />
+        <module name="ShardingJDBC" />
+        <module name="spi" />
         <module name="consumer" />
-        <module name="elasticsearch" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -32,6 +34,7 @@
       <module name="elasticsearch" target="1.8" />
       <module name="GateWay" target="1.8" />
       <module name="gateway" target="1.8" />
+      <module name="IO" target="8" />
       <module name="kmp" target="1.8" />
       <module name="kmp-admin" target="1.8" />
       <module name="kmp-common" target="1.8" />
@@ -47,6 +50,7 @@
       <module name="server2 (1)" target="8" />
       <module name="sharding-jdbc" target="1.8" />
       <module name="ShardingJDBC" target="1.8" />
+      <module name="spi" target="8" />
       <module name="Spring-Security" target="8" />
       <module name="visual-monitor" target="1.8" />
       <module name="xxl-job" target="1.8" />

@@ -26,7 +26,6 @@ public class MyRedisThreadPool {
         }
     }
 
-
     public static MyRedisThreadPool getInstance(int coreNum) {
         if (instance == null) {
             instance = new MyRedisThreadPool(coreNum);
