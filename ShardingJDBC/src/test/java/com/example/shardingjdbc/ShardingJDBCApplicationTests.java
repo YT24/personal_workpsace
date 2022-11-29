@@ -34,19 +34,15 @@ class ShardingJDBCApplicationTests {
 
     }
 
-
-    // 不分库分表
     @Test
-    void contextLoads() throws InterruptedException {
+    void addUser() {
         User user = new User();
-
-        user.setUsername("杜兰特");
-        user.setPassword("33");
-        user.setNickname("KD");
         user.setStatus(Boolean.TRUE);
+        user.setUsername("kobe");
+        user.setPassword("24");
         userMapper.insert(user);
-        System.out.println("用户id："+user.getId());
     }
+
 
     @Test
     void hint(){
