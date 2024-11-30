@@ -1,9 +1,9 @@
 package com.example.bserver.aop;
 
+import com.example.bserver.utils.AESUtils;
 import com.example.bserver.annotation.Encrypt;
 import com.example.bserver.config.properties.EncryptProperties;
 import com.example.bserver.expection.ResponseResult;
-import com.example.bserver.utils.AESUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

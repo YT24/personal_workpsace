@@ -1,8 +1,8 @@
 package com.example.bserver.aop;
 
+import com.example.bserver.utils.AESUtils;
 import com.example.bserver.annotation.Decrypt;
 import com.example.bserver.config.properties.EncryptProperties;
-import com.example.bserver.utils.AESUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.core.MethodParameter;

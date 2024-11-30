@@ -30,7 +30,6 @@ public class RedisQueueListener implements Runnable {
 
     @Override
     public void run() {
-
         redisTemplate = SpringContextHolder.getBean(StringRedisTemplate.class);
         log.info("redis监听器开始监听:{}", redisQueueConsumer.getQueueName());
         while (RedisQueueConsumerContainer.isRun) {

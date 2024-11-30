@@ -1,10 +1,7 @@
 package com.example.bserver.interceptor;
 
-import com.example.bserver.annotation.AutoIdempotent;
-import com.example.bserver.expection.AutoIdempotentExpection;
 import com.example.bserver.token.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -12,8 +9,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.lang.reflect.Method;
-import java.util.Objects;
 
 @Component
 public class IdempotentInteceptor implements HandlerInterceptor {

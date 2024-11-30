@@ -1,14 +1,22 @@
+#spring:
+#  application:
+#    name: BServer
+#  cloud:
+#    discovery:
+#      server-addr: http://127.0.0.1:8848
+#    nacos:
+#      config:
+#        server-addr: http://127.0.0.1:8848
+#        file-extension: yml
+#        # 自定义namespace
+#        namespace: 0f5c3cf2-9b02-4e04-8b02-ef10439aba82
+#        # 自定义分组
+#        group: dev
+
+
 spring:
-  application:
-    name: BServer
-  cloud:
-    discovery:
-      server-addr: http://127.0.0.1:8848
-    nacos:
-      config:
-        server-addr: http://127.0.0.1:8848
-        file-extension: yml
-        # 自定义namespace
-        namespace: 0f5c3cf2-9b02-4e04-8b02-ef10439aba82
-        # 自定义分组
-        group: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: root1234
+    url: jdbc:mysql://localhost:3306/yangt?characterEncoding=utf-8&useUnicode=true&useSSL=false&serverTimezone=UTC
+    username: root

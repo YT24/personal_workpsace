@@ -10,23 +10,23 @@ spring:
     suffix: .html # 试图后的后缀
 
     #redis
-  redis:
-    host: 172.28.56.113
-    jedis:
-      pool:
-        max-idle: 200
-        max-wait:
-    password: Shangjian@123
-    port: 6379
-    timeout: 6000
-    enable: true
+#  redis:
+#    host: 172.28.56.113
+#    jedis:
+#      pool:
+#        max-idle: 200
+#        max-wait:
+#    password: Shangjian@123
+#    port: 6379
+#    timeout: 6000
+#    enable: true
 
   application:
     name: AServer
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848
 
 threadpool:
   corePoolSize: 2

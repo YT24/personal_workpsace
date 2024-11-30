@@ -2,27 +2,25 @@ package com.example.bserver.controller;
 
 import com.example.bserver.annotation.AutoIdempotent;
 import com.example.bserver.aop.UserToHolder;
-import com.example.bserver.beancreate.User;
-import com.example.bserver.event.NoticeEvent;
 import com.example.bserver.token.TokenService;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
+import com.example.bserver.beancreate.User;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.PostConstruct;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 @RefreshScope // nacos 配置修改时自动刷新
 @RestController
+@Slf4j
 public class ConsumerController {
 
 
@@ -36,9 +34,40 @@ public class ConsumerController {
     @Autowired
     private User user;
 
+    private static volatile ReentrantLock lock = new ReentrantLock();
+
+
+
+
+    @GetMapping("te")
+    public String te() throws InterruptedException {
+        LinkedBlockingQueue<String> blockingQueue = new LinkedBlockingQueue();
+        blockingQueue.offer("A");
+        Thread.sleep(3000);
+        log.info("请求成功了");
+        return "SUCCESS";
+    }
+
     @AutoIdempotent
     @GetMapping("/test")
     public String login(@RequestBody Map map) throws InterruptedException {
+        new Thread((() -> {
+            lock.lock();
+            try {
+                log.info("------线程：{},加锁成功");
+            }finally {
+                lock.unlock();
+            }
+        }),"线程-A").start();
+
+        new Thread((() -> {
+            lock.lock();
+            try {
+                log.info("------线程：{},加锁成功");
+            }finally {
+                lock.unlock();
+            }
+        }),"线程-B").start();
 
         return UserToHolder.getUserTo().toString();
     }

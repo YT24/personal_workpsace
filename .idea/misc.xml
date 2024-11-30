@@ -13,7 +13,8 @@
         <option value="$PROJECT_DIR$/BServer/pom.xml" />
         <option value="$PROJECT_DIR$/AServer/pom.xml" />
         <option value="$PROJECT_DIR$/server/pom.xml" />
-        <option value="$PROJECT_DIR$/Spring-Security/pom.xml" />
+        <option value="$PROJECT_DIR$/ShardingJDBC/pom.xml" />
+        <option value="$PROJECT_DIR$/spi/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

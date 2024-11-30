@@ -4,10 +4,7 @@ import lombok.Getter;
 import lombok.ToString;
 import org.springframework.context.ApplicationEvent;
 
-/**
- * @Author humorchen
- * @Date 2021/10/25
- */
+
 @Getter
 @ToString
 public class NoticeEvent extends ApplicationEvent {
